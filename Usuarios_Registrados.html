@@ -82,7 +82,7 @@
         function MostrarUsuarios() {
             var tabla = document.querySelector('#llenar')
             username = sessionStorage.usuario
-            fetch('http://localhost:5000/Registrar')
+            fetch('https://gersonquintana201908686.herokuapp.com//Registrar')
                 .then(response => response.json())
                 .catch(error => {
                     console.log(error)
@@ -108,7 +108,7 @@
 
         function EliminarUsuario(eliminar){
             var usuario = eliminar.value
-            fetch(`http://localhost:5000/Usuarios/${usuario}`,{
+            fetch(`https://gersonquintana201908686.herokuapp.com//Usuarios/${usuario}`,{
                 method:'DELETE',
             }).then(res => res.json())
             .catch(error => {

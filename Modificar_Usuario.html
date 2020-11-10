@@ -70,7 +70,7 @@
             cargar = sessionStorage.buscarUsuario
             var tabla = document.querySelector('#Cuerpo')
 
-            fetch(`http://localhost:5000/Usuario/${cargar}`)
+            fetch(`https://gersonquintana201908686.herokuapp.com//Usuario/${cargar}`)
                 .then(response => response.json())
                 .catch(error => {
                     console.log(error)
@@ -96,7 +96,7 @@
                 'contrasena':contrasena
             }
 
-            fetch(`http://localhost:5000/Usuarios/ModificarUsuario/${usuario}`,{
+            fetch(`https://gersonquintana201908686.herokuapp.com//Usuarios/ModificarUsuario/${usuario}`,{
                 method: 'PUT',
                 body: JSON.stringify(objeto), // Siempre convertir en JSON nuestro objeto
                 headers:{

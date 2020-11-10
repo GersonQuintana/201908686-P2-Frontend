@@ -81,7 +81,7 @@
         function MostrarMusica() {
             var tabla = document.querySelector('#llenar')
             username = sessionStorage.usuario
-            fetch('http://localhost:5000/MusicaSolicitada')
+            fetch('https://gersonquintana201908686.herokuapp.com//MusicaSolicitada')
                 .then(response => response.json())
                 .catch(error => {
                     console.log(error)
@@ -107,7 +107,7 @@
             var nombreCancion = variable.value
             alert(`Se agregó al listado de caciones disponibles la canción ${nombreCancion} con éxito`)
 
-            fetch(`http://localhost:5000/CancionesSolicitadas/${nombreCancion}`)
+            fetch(`https://gersonquintana201908686.herokuapp.com//CancionesSolicitadas/${nombreCancion}`)
                 .then(response => response.json())
                 .catch(error => {
                     console.log(error)
@@ -136,7 +136,7 @@
             }
             //En este punto ya se puede agregar la canción seleccionada a la 
             //lista de canción seleccionada
-            fetch('http://localhost:5000/CargarCanciones', {
+            fetch('https://gersonquintana201908686.herokuapp.com//CargarCanciones', {
             method: 'POST',
             body: JSON.stringify(objeto),
             headers:{
@@ -156,7 +156,7 @@
 
         function RechazarCancion(eliminar){
             var nombreCancion = eliminar
-            fetch(`http://localhost:5000/EliminarCancionSolicitada/${nombreCancion}`,{
+            fetch(`https://gersonquintana201908686.herokuapp.com//EliminarCancionSolicitada/${nombreCancion}`,{
                 method:'DELETE',
             }).then(res => res.json())
             .catch(error => {

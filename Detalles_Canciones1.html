@@ -92,7 +92,7 @@
                 var video = document.querySelector('#contenedor2')
                 var coments = document.querySelector('#contenedor3')
     
-                fetch(`http://localhost:5000/Musica/${cargar}`)
+                fetch(`https://gersonquintana201908686.herokuapp.com//Musica/${cargar}`)
                 .then(response => response.json())
                 .catch(error => {
                     console.log(error)
@@ -135,7 +135,7 @@
 
             function verComentarios(variable){
                 var coments = document.querySelector('#contenedor3')
-                fetch(`http://localhost:5000/Musica/Comentarios/${variable}`)
+                fetch(`https://gersonquintana201908686.herokuapp.com//Musica/Comentarios/${variable}`)
                 .then(response => response.json())
                 .then(res => {
                     for (var i in res){
@@ -157,7 +157,7 @@
                     'comentario': coment
                 }
 
-                fetch(`http://localhost:5000/Musica/ComentarioNuevo`,{
+                fetch(`https://gersonquintana201908686.herokuapp.com//Musica/ComentarioNuevo`,{
                 method: 'PUT',
                 body: JSON.stringify(objeto), // Siempre convertir en JSON nuestro objeto
                 headers:{

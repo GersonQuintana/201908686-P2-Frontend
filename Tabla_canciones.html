@@ -85,7 +85,7 @@
         function MostrarMusica() {
             var tabla = document.querySelector('#llenar')
             username = sessionStorage.usuario
-            fetch('http://localhost:5000/Musica')
+            fetch('https://gersonquintana201908686.herokuapp.com//Musica')
                 .then(response => response.json())
                 .catch(error => {
                     console.log(error)
@@ -112,7 +112,7 @@
 
         function EliminarCancion(eliminar){
             var nombreCancion = eliminar.value
-            fetch(`http://localhost:5000/Musica/${nombreCancion}`,{
+            fetch(`https://gersonquintana201908686.herokuapp.com//Musica/${nombreCancion}`,{
                 method:'DELETE',
             }).then(res => res.json())
             .catch(error => {
@@ -126,7 +126,7 @@
 
         function VerComentarios(nombreComentarios){
             var cancion = nombreComentarios.value
-            fetch(`http://localhost:5000/Musica/Comentarios/${cancion}`)
+            fetch(`https://gersonquintana201908686.herokuapp.com//Musica/Comentarios/${cancion}`)
             .then(response => response.json())
             .catch(error => {
                 alert("Ocurrió un error al visualizar los comentarios.")

@@ -140,7 +140,7 @@
                 'youtube': youtube       
              }
 
-            fetch('http://localhost:5000/CargarCanciones', {
+            fetch('https://gersonquintana201908686.herokuapp.com//CargarCanciones', {
             method: 'POST',
             body: JSON.stringify(objeto),
             headers:{
@@ -166,7 +166,7 @@
         function MostrarCanciones(){
             var contenido = document.querySelector('#CuerpoCanciones') 
             contenido.innerHTML = ""
-            fetch('http://localhost:5000/Musica')
+            fetch('https://gersonquintana201908686.herokuapp.com//Musica')
             .then(response => response.json())
             .catch(error => {
             console.log(error)

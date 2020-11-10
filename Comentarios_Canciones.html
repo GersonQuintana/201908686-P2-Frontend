@@ -92,7 +92,7 @@
         function MostrarComentarios() {
             var tabla = document.querySelector('#CuerpoComentarios')
             cancion = sessionStorage.name
-            fetch(`http://localhost:5000/Musica/Comentarios/${cancion}`)
+            fetch(`https://gersonquintana201908686.herokuapp.com//Musica/Comentarios/${cancion}`)
                 .then(response => response.json())
                 .catch(error => {
                     console.log(error)
@@ -113,7 +113,7 @@
         function MostrarImagen(){
             var imagen = document.querySelector('#imagen')
 
-            fetch(`http://localhost:5000/Musica/${cancion}`)
+            fetch(`https://gersonquintana201908686.herokuapp.com//Musica/${cancion}`)
             .then(response => response.json())
             .catch(error => {
                 alert("Ocurrió un error durante el proceso")

@@ -87,7 +87,7 @@
             
             alert(`El nombre del usuario a modificar es ${username}`)
 
-            fetch(`http://localhost:5000/Usuario/${username}`)
+            fetch(`https://gersonquintana201908686.herokuapp.com//Usuario/${username}`)
                 .then(response => response.json())
                 .catch(error => {
                     console.log(error)
@@ -117,7 +117,7 @@
                 'contrasena':contrasena
             }
 
-            fetch(`http://localhost:5000/Usuarios/ModificarUsuarioDif/${usuario}`,{
+            fetch(`https://gersonquintana201908686.herokuapp.com//Usuarios/ModificarUsuarioDif/${usuario}`,{
                 method: 'PUT',
                 body: JSON.stringify(objeto),
                 headers:{
@@ -145,7 +145,7 @@
                 'contrasena':contrasena
             }
 
-            fetch(`http://localhost:5000/Usuarios/ModificarUsuario/${usuario}`,{
+            fetch(`https://gersonquintana201908686.herokuapp.com//Usuarios/ModificarUsuario/${usuario}`,{
                 method: 'PUT',
                 body: JSON.stringify(objeto), // Siempre convertir en JSON nuestro objeto
                 headers:{

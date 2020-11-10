@@ -91,7 +91,7 @@
             cargar = sessionStorage.buscarCancion
             var tabla = document.querySelector('#Cuerpo')
 
-            fetch(`http://localhost:5000/Musica/${cargar}`)
+            fetch(`https://gersonquintana201908686.herokuapp.com//Musica/${cargar}`)
                 .then(response => response.json())
                 .catch(error => {
                     console.log(error)
@@ -126,7 +126,7 @@
                 'youtube':youtube
             }
 
-            fetch(`http://localhost:5000/Musica/ModificarCancion/${cargar}`,{
+            fetch(`https://gersonquintana201908686.herokuapp.com//Musica/ModificarCancion/${cargar}`,{
                 method: 'PUT',
                 body: JSON.stringify(objeto), // Siempre convertir en JSON nuestro objeto
                 headers:{
